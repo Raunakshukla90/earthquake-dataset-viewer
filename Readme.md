@@ -16,7 +16,6 @@ Built with HTML, CSS, and vanilla JavaScript, this project fetches earthquake da
 - ⏱️ **Request Timeout** — Uses `AbortController` to limit requests to 7 seconds.
 - ⚠️ **Error Handling** — Displays status messages when requests fail or time out, with an option to retry.
 - 📱 **Responsive Layout** — Uses CSS Grid and Flexbox to adapt the interface to different screen sizes.
-- ♿ **Accessibility Considerations** — Includes semantic sections, labeled controls, and an accessible status region.
 
 ## 🛰️ Data Source
 
