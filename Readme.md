@@ -1,4 +1,4 @@
-# 🌎 Global Seismic Event Explorer
+# 🌎 Global Seismic Event Explorer#
 
 A responsive, single-page web application for exploring global earthquake activity using real-time data from the **United States Geological Survey (USGS) Earthquake Hazards Program**.
 
