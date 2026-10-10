@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Seismic Activity - Public Dataset Explorer </title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="app-container">
+    <header>
+      <h1>Global Seismic Event Explorer</h1>
+      <p class="source-tag">Source: USGS Real-time GeoJSON Feed (Past 24 Hours)</p>
+    </header>
+
+    <!-- Synthetic metrics that synthesize the raw feed -->
+    <section class="metrics-grid" aria-label="Dataset Summary">
+      <div class="metric-card">
+        <div class="metric-label">Events Evaluated</div>
+        <div class="metric-value" id="metric-count">0</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Strongest Detected</div>
+        <div class="metric-value" id="metric-max-mag">0.0</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Average Depth</div>
+        <div class="metric-value" id="metric-avg-depth">0 km</div>
+      </div>
+    </section>
+
+    <!-- Data exploration controls -->
+    <section class="controls-bar" aria-label="Filters">
+      <div class="control-item">
+        <label for="filter-mag">Minimum Magnitude</label>
+        <select id="filter-mag">
+          <option value="all">All magnitudes (1.0+)</option>
+          <option value="2.5">2.5+ (Felt locally)</option>
+          <option value="4.5">4.5+ (Significant)</option>
+        </select>
+      </div>
+
+      <div class="control-item">
+        <label for="search-place">Filter Place / Region</label>
+        <input type="text" id="search-place" placeholder="e.g. California, Japan..." />
+      </div>
+
+      <button type="button" class="btn btn-outline" id="btn-simulate-fail">Simulate Timeout / Fail</button>
+      <button type="button" class="btn btn-primary" id="btn-refresh" aria-label="Reload live seismic feed">Reload Feed</button>
+    </section>
+
+    <!-- Dynamic Status Region -->
+    <div id="status-container" aria-live="polite"></div>
+
+    <!-- Data Display Area -->
+    <div class="table-responsive" id="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Magnitude</th>
+            <th>Location</th>
+            <th>Depth</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody id="records-body"></tbody>
+      </table>
+    </div>
+
+    <!-- Dataset limits context -->
+    <footer class="limitations-box">
+      <strong>Analytical Boundary:</strong> This application visualizes recorded seismic vibrations from the USGS automated seismic network. It establishes where and when recent seismic waves were registered; it does <em>not</em> predict future earthquakes, evaluate structural building damage, or assert complete detection in areas lacking seismic sensor density.
+    </footer>
+  </div>
+<script src="./app.js"></script>
+</body>
+</html>
