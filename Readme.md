@@ -265,3 +265,6 @@ Special thanks to the **United States Geological Survey (USGS)** for providing p
 
 **Global Seismic Event Explorer**  
 *Explore recent earthquake activity around the world through publicly available seismic data.*
+
+
+This project is developed for educational purposes and uses publicly available USGS earthquake data.
