@@ -73,7 +73,7 @@ Node.js and npm are not required for the current standalone HTML application.
 Open a terminal and run:
 
 ```bash
-git clone https://github.com/GhulamMustafaAnsari/earthquake-dataset-viewer.git
+git clone https://github.com/Raunakshukla90/earthquake-dataset-viewer.git
 ```
 
 ### 2. Navigate to the Project Directory
